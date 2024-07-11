@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter Test Runner</title>
+</head>
+
+<body>
+    <h1>Flutter Test Runner</h1>
+    <p th:text="${message}"></p>
+
+    <h2>Test Results:</h2>
+    <p>Total Success: <span th:text="${totalSuccess}"></span></p>
+    <p>Total Failed: <span th:text="${totalFailed}"></span></p>
+    <p>Score: <span th:text="${score}"></span>%</p>
+
+    <h2>Success Tests:</h2>
+    <ul>
+        <li th:each="test : ${successTests}" th:text="${test}"></li>
+    </ul>
+
+    <h2>Failed Tests:</h2>
+    <ul>
+        <li th:each="test : ${failedTests}" th:text="${test}"></li>
+    </ul>
+
+    <a href="/">Go back</a>
+</body>
+
+</html>
