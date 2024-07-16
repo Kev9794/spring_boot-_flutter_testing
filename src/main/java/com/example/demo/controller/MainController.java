@@ -115,7 +115,6 @@ public class MainController {
         Matcher m = r.matcher(url);
 
         if (m.find()) {
-            // String username = m.group(1);
             String repoName = m.group(2);
             return repoName;
         } else {
